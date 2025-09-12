@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberkifu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cyberkifu</h1>
+    <div id="controls">
+        <label for="board-size" data-en="Board Size:" data-be="Памер дошкі:">Board Size:</label>
+        <select id="board-size">
+            <option value="9">9x9</option>
+            <option value="13">13x13</option>
+            <option value="19">19x19</option>
+        </select>
+        <button id="night-mode-toggle" data-en="Night Mode" data-be="Начны рэжым">Night Mode</button>
+        <button id="language-toggle">Беларуская мова</button>
+        <button id="export-sgf" data-en="Export SGF" data-be="Экспарт SGF">Export SGF</button>
+        <span id="current-player"></span>
+    </div>
+    <div id="main-area">
+        <canvas id="go-board" width="600" height="600"></canvas>
+        <div id="move-tree-container">
+            <div id="move-navigation">
+                <button id="first-move" data-en="⏮ First" data-be="⏮ Першы">⏮ First</button>
+                <button id="prev-move" data-en="⏪ Prev" data-be="⏪ Назад">⏪ Prev</button>
+                <button id="next-move" data-en="Next ⏩" data-be="Далей ⏩">Next ⏩</button>
+                <button id="last-move" data-en="Last ⏭" data-be="Апошні ⏭">Last ⏭</button>
+            </div>
+            <div id="move-tree"></div>
+        </div>
+    </div>
+    <button id="delete-last-move" data-en="Delete Last Move" data-be="Выдаліць апошні ход">Delete Last Move</button>
+    <button id="clear-all-moves" data-en="Clear All Moves" data-be="Ачысціць усе хады">Clear All Moves</button>
+    <button id="undo-move" data-en="Undo" data-be="Адмяніць">Undo</button>
+    <button id="redo-move" data-en="Redo" data-be="Паўтарыць">Redo</button>
+    <button id="score-game" data-en="Score Game" data-be="Падлічыць гульню">Score Game</button>
+    <button id="joseki-btn" data-en="Joseki" data-be="Дзёсэкі">Joseki</button>
+    <div id="score-result"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f5f5dc;
+}
+
+body.night-mode {
+    background: #181a1b;
+    color: #e0e0e0;
+}
+
+button, select {
+    font-size: 1rem;
+    padding: 6px 18px;
+    border-radius: 5px;
+    border: 1px solid #888;
+    background: #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+button:hover, button:focus, select:focus {
+    background: #e0e0e0;
+    border-color: #333;
+    outline: none;
+}
+
+body.night-mode button, body.night-mode select {
+    background: #232526;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.night-mode button:hover, body.night-mode button:focus, body.night-mode select:focus {
+    background: #333;
+    color: #fff;
+    border-color: #aaa;
+}
+
+#controls {
+    margin: 16px auto 8px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #fffbe6;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+body.night-mode #controls {
+    background: #232526;
+}
+
+#main-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#go-board {
+    background: #deb887;
+    border: 2px solid #333;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+body.night-mode #go-board {
+    background: #333;
+    border-color: #aaa;
+}
+
+#move-history {
+    margin: 20px auto;
+    width: 320px;
+    background: #fffbe6;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: left;
+    font-family: monospace;
+    min-height: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+body.night-mode #move-history {
+    background: #232526;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+#move-tree-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#move-navigation {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    justify-content: center;
+}
+
+#move-navigation button {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    min-width: 50px;
+}
+
+#move-tree {
+    min-height: 600px;
+    max-height: 600px;
+    overflow-y: auto;
+    background: #fffbe6;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+body.night-mode #move-tree {
+    background: #232526;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.move-item {
+    transition: background-color 0.2s;
+}
+
+.move-item:hover {
+    background-color: #e3f2fd !important;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+body.night-mode .move-item:hover {
+    background-color: #37474f !important;
+}
+
+#score-game {
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 6px 18px;
+    border-radius: 5px;
+    border: 1px solid #888;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+body.night-mode #score-game {
+    background: #232526;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+#score-result {
+    margin: 16px auto 0 auto;
+    width: 320px;
+    min-height: 32px;
+    font-size: 1.1rem;
+    text-align: center;
+    background: #fffbe6;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+body.night-mode #score-result {
+    background: #232526;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+#current-player {
+    display: inline-block;
+    margin-left: 16px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+#current-player .stone {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    margin-right: 0.4em;
+    vertical-align: middle;
+    border: 2px solid #333;
+}
+
+#current-player .stone.black {
+    background: #222;
+}
+#current-player .stone.white {
+    background: #fff;
+    border: 2px solid #aaa;
+}
